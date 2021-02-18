@@ -1,5 +1,6 @@
 import logging
 import discord
+import time
 from discord.ext import commands, tasks
 from ark.settings import __version__, DRAGON_IMG
 from core.api_requests import (get_capsules, get_capsule, get_company, get_histories,
@@ -362,5 +363,5 @@ async def mission(ctx, id=None):
                     inline=True)
     embed.add_field(name=':link: Website', value=website, inline=True)
     embed.add_field(name='Description', value=description, inline=False)
-
+    # just dont care LOL
     return await ctx.send(':rocket: Showing mission info!', embed=embed)
